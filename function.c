@@ -4,12 +4,14 @@ char ** parse_args( char * line )//from what I read online, standards convention
 {
   // char * arg = malloc(100 * sizeof(char *));
   int argIndex;
-  char ** argArray = malloc(5 * sizeof(char **));//memory is allocated
+  char ** argArray = malloc(6 * sizeof(char **));//memory is allocated
   for(argIndex = 0 ; argIndex < 5 ; argIndex ++)
   {
     if(!line)
     {
+      argArray[argIndex] = NULL;
       argIndex = 5;
+      argArray[argIndex] = NULL;
     }
     else
     {
