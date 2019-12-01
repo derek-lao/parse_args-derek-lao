@@ -3,6 +3,7 @@
 int main()
 {
   printf("running...\n");
+  printf("testing parse_args(line1) for line1 = \"ls -a -l\"\n");
   char line1[100] = "ls -a -l\0";
   char ** args = parse_args(line1);//memory already allocated
   printf("args[0] is %s\n", args[0]);
