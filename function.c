@@ -9,19 +9,17 @@ char ** parse_args( char * line )//from what I read online, standards convention
   {
     if(!line)
     {
-      printf("final stretch now!\n");
+      // printf("final stretch now!\n");
       argIndex = 5;
     }
     else
     {
       strcpy(arg, strsep(&line, " ")); // line is changed to the next argument
-      printf("made it!\n");
-      printf("arg is %s\n", arg);
-      // printf("line is %ld\n", line);
-      // printf("* line is %c\n\n", * line);
       argArray[argIndex] = arg;
-      printf("job's done, the beach is dead\n");
+      printf("arg is %s\n", arg);
+      printf("argArray[argIndex] is %s\n", argArray[argIndex]);
     }
   }
+  printf("argArray[0] is %s\n", argArray[0]);
   return argArray;
 }
